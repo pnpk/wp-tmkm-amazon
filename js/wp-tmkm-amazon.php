@@ -143,7 +143,7 @@ class WpTmkmAmazonView {
 
 	function WpTmkmAmazonView() {
 
-		$this->makedetailview = & new MakeAmazonHtml();
+		$this->makedetailview = new MakeAmazonHtml();
 
 	}
 
@@ -209,7 +209,7 @@ class WpTmkmAmazonList {
 
 	function WpTmkmAmazonList() {
 
-		$this->makedetailview = & new MakeAmazonHtml();
+		$this->makedetailview = new MakeAmazonHtml();
 		$this->sql = '';
 		$this->ordersql = '';
 
@@ -301,8 +301,8 @@ class MakeAmazonHtml {
 
 	function MakeAmazonHtml() {
 
-		$this->amazonparse = & new GetAmazonXmlParse();
-		$this->generalfunclib = & new generalFuncLibrary();
+		$this->amazonparse = new GetAmazonXmlParse();
+		$this->generalfunclib = new generalFuncLibrary();
 
 	}
 
@@ -831,10 +831,10 @@ Event.observe(window, 'load', init, false);
  * WpTmkmAmazon WordPress Plugin Class & Funtcion Define
  *****************************************************************************/
 
-$wpTmkmAmazonView = & new WpTmkmAmazonView();
-$wpTmkmAmazonList = & new WpTmkmAmazonList();
-$wpTmkmAmazonFind = & new WpTmkmAmazonFind();
-$wpTmkmAmazonAdmin = & new WpTmkmAmazonAdmin();
+$wpTmkmAmazonView = new WpTmkmAmazonView();
+$wpTmkmAmazonList = new WpTmkmAmazonList();
+$wpTmkmAmazonFind = new WpTmkmAmazonFind();
+$wpTmkmAmazonAdmin = new WpTmkmAmazonAdmin();
 
 add_action('wp_head', 'add_tmkmamazon_stylesheet');
 add_filter('admin_head', 'add_tmkmamazon_searchjs');

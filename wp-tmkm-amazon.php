@@ -196,7 +196,7 @@ class WpTmkmAmazonView {
 	 */
 
 	function WpTmkmAmazonView() {
-		$this->makedetailview = & new MakeAmazonHtml();
+		$this->makedetailview = new MakeAmazonHtml();
 	}
 
 	/**
@@ -264,7 +264,7 @@ class WpTmkmAmazonList {
 
 	function WpTmkmAmazonList() {
 
-		$this->makedetailview = & new MakeAmazonHtml();
+		$this->makedetailview = new MakeAmazonHtml();
 		$this->sql = '';
 		$this->ordersql = '';
 
@@ -369,8 +369,8 @@ class MakeAmazonHtml {
 
 	function MakeAmazonHtml() {
 
-		$this->amazonparse = & new GetAmazonXmlParse();
-		$this->generalfunclib = & new generalFuncLibrary();
+		$this->amazonparse = new GetAmazonXmlParse();
+		$this->generalfunclib = new generalFuncLibrary();
 
 	}
 
@@ -681,10 +681,10 @@ function add_tmkmamazon_stylesheet(){
  * WpTmkmAmazon WordPress Plugin Class & Funtcion Define
  *****************************************************************************/
 
-$wpTmkmAmazonView = & new WpTmkmAmazonView();
-$wpTmkmAmazonList = & new WpTmkmAmazonList();
-$wpTmkmAmazonFind = & new WpTmkmAmazonFind();
-$wpTmkmAmazonAdmin = & new WpTmkmAmazonAdmin();
+$wpTmkmAmazonView = new WpTmkmAmazonView();
+$wpTmkmAmazonList = new WpTmkmAmazonList();
+$wpTmkmAmazonFind = new WpTmkmAmazonFind();
+$wpTmkmAmazonAdmin = new WpTmkmAmazonAdmin();
 
 add_action('wp_head', 'add_tmkmamazon_stylesheet');
 add_action('admin_menu',		array(&$wpTmkmAmazonAdmin, 'tmkm_amazon_add_options')); 		// Insert the Admin panel.

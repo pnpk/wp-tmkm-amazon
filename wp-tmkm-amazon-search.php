@@ -7,7 +7,7 @@ include_once('wp-tmkm-amazon-function.php');
 // ** 修正 (2009/6/22)
 include_once('../../../wp-load.php');
 // ここまで **
-$amazonparse = & new GetAmazonXmlParse();
+$amazonparse = new GetAmazonXmlParse();
 
 /******************************************************************************
  * INITIALIZE
